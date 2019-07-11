@@ -94,16 +94,16 @@ void MotorL(int Pulse_Width1) {
 
 void MotorR(int Pulse_Width2) {
 if(Pulse_Width2 > 0) {
-    analogWrite(A_1A, Pulse_Width2);
-    analogWrite(A_1B, 0);
+    analogWrite(A_1A, 0);
+    analogWrite(A_1B, Pulse_Width2);
     digitalWrite(A_1A, HIGH);
     digitalWrite(A_1B, LOW);
   }
   if(Pulse_Width2 < 0) {
     Pulse_Width2 = abs(Pulse_Width2);
 
-    analogWrite(A_1A, Pulse_Width2);
-    analogWrite(A_1B, 0);
+    analogWrite(A_1A, 0);
+    analogWrite(A_1B, Pulse_Width2);
     digitalWrite(A_1A, LOW);
     digitalWrite(A_1B, HIGH);
   }
